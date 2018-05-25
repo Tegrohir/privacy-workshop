@@ -1,0 +1,11 @@
+# Covers Maven
+target/
+
+# Covers Eclipse IDE
+.classpath
+.project
+.settings/
+
+# Covers IntelliJ IDE
+.idea/
+*.iml
