@@ -13,14 +13,14 @@
 
 <article>
   <h1>Kies een Team</h1>
-	<form action="">
-	  <input type="radio" name="gender" value="male"> Team 1<br>
-	  <input type="radio" name="gender" value="female"> Team 2<br>
-	  <input type="radio" name="gender" value="other"> Team 3<br>
-	  <input type="radio" name="gender" value="other"> Team 4<br><br>	  
+	<form action="team" method="post">
+	  <input type="radio" name="team" value="team1" checked> Team 1<br>
+	  <input type="radio" name="team" value="team2"> Team 2<br>
+	  <input type="radio" name="team" value="team3"> Team 3<br>
+	  <input type="radio" name="team" value="team4"> Team 4<br>
+	  <a href="start" class="previous">&laquo; Previous</a>
+	  <input class="next" type="submit" value="Next &raquo;"> 
 	</form>
-  <a href="index.html" class="previous">&laquo; Previous</a>
-  <a href="role.html" class="next">Next &raquo;</a>
 </article>
 
 <footer>Copyright &copy; The Privacy Game</footer>

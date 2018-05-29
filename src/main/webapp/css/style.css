@@ -2,25 +2,24 @@ body {
 	margin: 0;
 }
 
-a {
-    text-decoration: none;
+.previous {
+	text-decoration: none;
     display: inline-block;
     padding: 8px 16px;
-}
-
-a:hover {
-    background-color: #ddd;
+    background-color: #f1f1f1;
     color: black;
 }
 
-.previous {
-    background-color: #f1f1f1;
+.previous:hover {
+	background-color: #ddd;
     color: black;
 }
 
 .next {
     background-color: #4CAF50;
     color: white;
+    padding: 8px 16px;
+    border: 0;
 }
 
 div.container {
@@ -39,4 +38,17 @@ header, footer {
 article {
     padding: 1em;
     overflow: hidden;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
 }
