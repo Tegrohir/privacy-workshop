@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,29 +20,39 @@
 		<article>
 			<h1>Overzicht inzendingen</h1>
 			<c:choose>
-				<c:when test="${empty guests}">
-					<p>Er zijn geen gasten gevonden.</p>
+				<c:when test="${empty teams}">
+					<p>Er zijn geen teams gevonden.</p>
 				</c:when>
 				<c:otherwise>
-					<table id="history">
-						<tr>
-							<th>Gast Sessie</th>
-							<th>Team</th>
-							<th>Rol</th>
-							<th>Antwoorden</th>
-						</tr>
-						<c:forEach items="${guests}" var="guest">
-							<tr>
-								<td><c:out value="${guest.session}" /></td>
-								<td><c:out value="${guest.team}" /></td>
-								<td><c:out value="${guest.role}" /></td>
-								<td><c:forEach items="${guest.answers}" var="answer">
-										<c:out value="${answer}" />
-										<br>
-									</c:forEach></td>
-							</tr>
-						</c:forEach>
-					</table>
+
+				<c:forEach items="${teams}" var="team">
+					<h1>Team <c:out value="${team.id}" /> (code: <c:out value="${team.code}" />)</h1>
+					
+					<c:choose>
+						<c:when test="${empty team.users}">
+							<p>Er zijn geen gebruikers gevonden.</p>
+						</c:when>
+						<c:otherwise>
+							<table id="history">
+								<tr>
+									<th>Gebruiker</th>
+									<th>Antwoorden</th>
+								</tr>
+								<c:forEach items="${team.users}" var="user">
+									<tr>
+										<td><c:out value="${user.session}" /></td>
+										<td><c:forEach items="${user.answers}" var="answer">
+												<fmt:formatDate pattern = "dd-MM-yyyy HH:mm:ss" value = "${answer.date}" />: 
+												<c:out value="${answer.text}" />
+												<hr>
+											</c:forEach></td>
+									</tr>
+								</c:forEach>
+							</table>
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+				
 				</c:otherwise>
 			</c:choose>
 		</article>

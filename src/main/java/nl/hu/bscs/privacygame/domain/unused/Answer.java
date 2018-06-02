@@ -1,4 +1,4 @@
-package workshop.domain;
+package nl.hu.bscs.privacygame.domain.unused;
 
 public class Answer {
     private String value;

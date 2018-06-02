@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,12 +19,14 @@
 		</header>
 
 		<article>
-			<h1>Kies een Team</h1>
-			<form action="team" method="post">
-				<input type="radio" name="team" value="team1" checked> Team 1<br>
-				<input type="radio" name="team" value="team2"> Team 2<br>
-				<input type="radio" name="team" value="team3"> Team 3<br>
-				<input type="radio" name="team" value="team4"> Team 4<br>
+			<h1>Vul je code in</h1>
+			<c:if test="${message != null}">
+				<p><c:out value="${message}" /></p>
+			</c:if>
+
+			
+			<form action="login" method="post">
+				<input type="text" name="code"><br>
 				<div class="buttons">
 					<a href="start" class="previous">&laquo; Previous</a> <input
 						class="next" type="submit" value="Next &raquo;">
