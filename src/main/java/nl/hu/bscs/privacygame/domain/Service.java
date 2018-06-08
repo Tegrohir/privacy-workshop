@@ -1,5 +1,7 @@
 package nl.hu.bscs.privacygame.domain;
 
+import nl.hu.bscs.privacygame.view.Page;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,7 @@ public class Service {
     public static Service getInstance() {
         return service;
     }
-    
+
     public Team getTeamByCode(String code) {
         for (Team team : teams) {
             if (team.getCode().equals(code)) {

@@ -14,13 +14,38 @@
 	</servlet>
 	
 	<servlet>
-		<servlet-name>QuestionOneServlet</servlet-name>
-		<servlet-class>nl.hu.bscs.privacygame.view.QuestionOneServlet</servlet-class>
+		<servlet-name>Question1Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question1Servlet</servlet-class>
 	</servlet>
 
 	<servlet>
-		<servlet-name>QuestionTwoServlet</servlet-name>
-		<servlet-class>nl.hu.bscs.privacygame.view.QuestionTwoServlet</servlet-class>
+		<servlet-name>Question2Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question2Servlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Question3Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question3Servlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Question4Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question4Servlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Question5Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question5Servlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Question6Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question6Servlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Question7Servlet</servlet-name>
+		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question7Servlet</servlet-class>
 	</servlet>
 
 	<servlet>
@@ -39,13 +64,38 @@
 	</servlet-mapping>
 	
 	<servlet-mapping>
-		<servlet-name>QuestionOneServlet</servlet-name>
+		<servlet-name>Question1Servlet</servlet-name>
 		<url-pattern>/question1</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>QuestionTwoServlet</servlet-name>
+		<servlet-name>Question2Servlet</servlet-name>
 		<url-pattern>/question2</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Question3Servlet</servlet-name>
+		<url-pattern>/question3</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Question4Servlet</servlet-name>
+		<url-pattern>/question4</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Question5Servlet</servlet-name>
+		<url-pattern>/question5</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Question6Servlet</servlet-name>
+		<url-pattern>/question6</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Question7Servlet</servlet-name>
+		<url-pattern>/question7</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
