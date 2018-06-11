@@ -11,7 +11,7 @@ public class Question2Servlet extends HttpServlet {
     private static final long serialVersionUID = -452821502141564336L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        Page page = new Page("question1.html");
+        Page page = new Page("question2.html");
         page.render(request, response);
     }
 

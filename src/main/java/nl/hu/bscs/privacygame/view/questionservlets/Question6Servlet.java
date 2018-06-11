@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Question6Servlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        Page page = new Page("question1.html");
+        Page page = new Page("question6.html");
         page.render(request, response);
     }
 
