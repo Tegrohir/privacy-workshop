@@ -19,6 +19,4 @@ public class Question1Servlet extends HttpServlet {
         QuestionServletHelper helper = new QuestionServletHelper();
         helper.doProcessAnswer(request, response, "question2");
     }
-
-
 }
