@@ -38,6 +38,21 @@ public class Team {
     }
 
     public void addAnswer(Answer answer) {
-        this.answers.add(answer);
+        Answer existingAnswer = getAnswerByQuestionId(answer.getQuestionId());
+        if (existingAnswer != null) {
+            this.answers.remove(existingAnswer);
+        }
+        
+        this.answers.add(existingAnswer);
+    }
+    
+    public Answer getAnswerByQuestionId(int questionId) {
+        for (Answer answer: answers) {
+            if (answer.getQuestionId() == questionId) {
+                return answer;
+            }
+        }
+        
+        return null;
     }
 }

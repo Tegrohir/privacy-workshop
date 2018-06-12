@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,8 +32,8 @@
             Een website trackt de bezoekersaantallen en een medewerken bekijkt deze.
             <br>
             <input type="radio" name="answer"
-                   value="Een werknemer bij Acrobaat BV bekijkt de financiële prestaties van het bedrijf en verwerkt deze in een rapport.">
-            Een werknemer bij Acrobaat BV bekijkt de financiële prestaties van het bedrijf en verwerkt deze in een rapport.
+                   value="Een werknemer bij Acrobaat BV bekijkt de financiÃ«le prestaties van het bedrijf en verwerkt deze in een rapport.">
+            Een werknemer bij Acrobaat BV bekijkt de financiÃ«le prestaties van het bedrijf en verwerkt deze in een rapport.
             <br>
             <input type="radio" name="answer"
                    value="Een bedrijf wijzigt de licentie van een klant.">

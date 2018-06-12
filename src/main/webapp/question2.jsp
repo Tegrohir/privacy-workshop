@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,18 +19,18 @@
     </header>
 
     <div class="progress-container">
-        <div class="progress-bar" style="width:42%"></div>
+        <div class="progress-bar" style="width:14%"></div>
     </div>
 
     <article>
-        <h1>Hoe gaat de ICT Manager erachter komen welke data gelekt is?</h1>
+        <h1>Wanneer moet Acrobaat BV een Functionaris Gegevensbescherming aanstellen?</h1>
         <p>Toelichting: het team dient het beste antwoord uit zoeken op
-            basis van onderzoek op internet en door te kijken naar de casus.</p>
-        <form action="question4" method="post">
+            basis van onderzoek op internet.</p>
+        <form action="question2" method="post">
             <textarea name="answer">Antwoord voor jouw team</textarea>
             <br>
             <div class="buttons">
-                <a href="intermission1.html" class="previous">&laquo; Vorige</a> <input
+                <a href="question1" class="previous">&laquo; Vorige</a> <input
                     class="next" type="submit" value="Volgende &raquo;">
             </div>
         </form>

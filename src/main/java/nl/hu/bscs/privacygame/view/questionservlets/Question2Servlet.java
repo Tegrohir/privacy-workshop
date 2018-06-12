@@ -11,12 +11,12 @@ public class Question2Servlet extends HttpServlet {
     private static final long serialVersionUID = -452821502141564336L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
-        Page page = new Page("question2.html");
+        Page page = new Page("question2.jsp");
         page.forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         QuestionServletHelper helper = new QuestionServletHelper();
-        helper.doProcessAnswer(request, response, "question3");
+        helper.doProcessAnswer(request, response, 2, "question3");
     }
 }

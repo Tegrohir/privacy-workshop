@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class QuestionServletHelper {
     private final static Logger logger = Logger.getLogger(Question1Servlet.class.getName());
 
-    public void doProcessAnswer(HttpServletRequest request, HttpServletResponse response, String nextPageUrl) {
+    public void doProcessAnswer(HttpServletRequest request, HttpServletResponse response, int currentPageId, String nextPageUrl) {
         Service service = Service.getInstance();
 
         String session = SessionUtility.getSessionId(request);
@@ -21,10 +21,10 @@ public class QuestionServletHelper {
 
         if (authorizeUser(response, team)) return;
 
-        Answer answer = new Answer(request.getParameter("answer"));
+        Answer answer = new Answer(currentPageId, request.getParameter("answer"));
         team.addAnswer(answer);
 
-        logger.info("Team " + team.getId() + " answer: " + answer.getText());
+        logger.info("Team " + team.getId() + " answer " + answer.getQuestionId() + ": " + answer.getText());
 
         Page page = new Page(nextPageUrl);
         page.redirect(response);

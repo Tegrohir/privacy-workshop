@@ -3,12 +3,18 @@ package nl.hu.bscs.privacygame.domain;
 import java.util.Date;
 
 public class Answer {
+    private final int questionId;
     private final String text;
     private final Date date;
 
-    public Answer(String text) {
+    public Answer(int questionId, String text) {
+        this.questionId = questionId;
         this.text = text;
-        date = new Date();
+        this.date = new Date();
+    }
+    
+    public int getQuestionId() {
+        return questionId;
     }
 
     public String getText() {

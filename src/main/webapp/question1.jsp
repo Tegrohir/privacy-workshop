@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +37,7 @@
         <p>Acrobaat BV krijgt zo de beschikking over enorme hoeveelheden
             gevoelige en minder gevoelige persoonsgegevens betreffende duizenden
             klanten. Hieronder vallen bijvoorbeeld gegevens als correspondentie
-            met de klant of financiële gegevens.</p>
+            met de klant of financiÃ«le gegevens.</p>
         <p>De klantdata worden om redenen van veiligheid en
             vertrouwelijkheid, opgeslagen op een dedicated database server. Deze
             database server wordt door Acrobaat BV zelf beheerd.</p>
@@ -57,18 +60,18 @@
             gebeuren en hoeveel informatie er precies is gelekt. Wel is volgens
             NOS bekend dat het mogelijk zou gaan om bijzonder gevoelige
             persoonsgegevens die een bijna compleet beeld kunnen geven van het
-            koopgedrag van klanten en de bedrijfs-financiële situatie. Volgens
+            koopgedrag van klanten en de bedrijfs-financiÃ«le situatie. Volgens
             NOS heeft de Autoriteit Persoonsgegevens aangeven onderzoek te
             zullen doen naar het lek.</p>
 
         <article>
             <h1>Binnen hoeveel uur na constatering moet Acrobaat BV het datalek bij de Autoriteit Persoonsgegevens gemeld worden?</h1>
             <form action="question1" method="post">
-                <input type="radio" name="answer" value="7 dagen" checked>
+                <input type="radio" name="answer" value="7 dagen" <c:if test = "${answer == null || answer == '7 dagen'}">checked</c:if>>
                 7 dagen<br>
-                <input type="radio" name="answer" value="3 werkdagen">
+                <input type="radio" name="answer" value="3 werkdagen" <c:if test = "${answer == '3 werkdagen'}">checked</c:if>>
                 3 werkdagen<br>
-                <input type="radio" name="answer" value="3 dagen">
+                <input type="radio" name="answer" value="3 dagen" <c:if test = "${answer == '3 dagen'}">checked</c:if>>
                 3 dagen<br>
                 <div class="buttons">
                     <a href="login" class="previous">&laquo; Vorige</a> <input
