@@ -16,6 +16,6 @@ public class Question6Servlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         QuestionServletHelper helper = new QuestionServletHelper();
-        helper.doProcessAnswer(request, response, "question7.html");
+        helper.doProcessAnswer(request, response, "intermission2.html");
     }
 }
