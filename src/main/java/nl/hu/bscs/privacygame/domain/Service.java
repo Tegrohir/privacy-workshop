@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Service {
-    private final static Service service = new Service();
-    public final List<Team> teams = new ArrayList<>();
+    private static final Service service = new Service();
+    private final List<Team> teams = new ArrayList<>();
 
     private Service() {
         teams.addAll(TeamFactory.createTeams());
