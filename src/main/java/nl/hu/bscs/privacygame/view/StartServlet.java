@@ -9,11 +9,11 @@ public class StartServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Page page = new Page("index.html");
-        page.redirect(request, response);
+        page.forward(request, response);
     }
     
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
-        Page page = new Page("login.jsp");
-        page.redirect(request, response);
+        Page page = new Page("login");
+        page.redirect(response);
     }
 }

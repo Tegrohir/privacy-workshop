@@ -11,11 +11,11 @@ public class Question5Servlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Page page = new Page("question5.html");
-        page.redirect(request, response);
+        page.forward(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         QuestionServletHelper helper = new QuestionServletHelper();
-        helper.doProcessAnswer(request, response, "question6.html");
+        helper.doProcessAnswer(request, response, "question6");
     }
 }

@@ -15,6 +15,6 @@ public class AdminServlet extends HttpServlet {
         request.setAttribute("teams", service.getTeams());
 
         Page page = new Page("admin.jsp");
-        page.redirect(request, response);
+        page.forward(request, response);
     }
 }

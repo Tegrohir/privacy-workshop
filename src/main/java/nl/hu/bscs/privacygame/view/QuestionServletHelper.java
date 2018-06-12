@@ -16,7 +16,7 @@ public class QuestionServletHelper {
         String session = SessionUtility.getSessionId(request);
         Team team = service.getTeamBySession(session);
 
-        if (authorizeUser(request, response, team)) return;
+        if (authorizeUser(response, team)) return;
 
         Answer answer = new Answer(request.getParameter("answer"));
         team.addAnswer(answer);
@@ -24,13 +24,13 @@ public class QuestionServletHelper {
         logger.info("Team " + team.getId() + " answer: " + answer.getText());
 
         Page page = new Page(nextPageUrl);
-        page.redirect(request, response);
+        page.redirect(response);
     }
 
-    private boolean authorizeUser(HttpServletRequest request, HttpServletResponse response, Team team) {
+    private boolean authorizeUser(HttpServletResponse response, Team team) {
         if (team == null) {
             Page page = new Page("unauthorized.html");
-            page.redirect(request, response);
+            page.redirect(response);
             return true;
         }
         return false;
