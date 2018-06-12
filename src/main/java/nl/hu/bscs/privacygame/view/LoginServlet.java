@@ -13,7 +13,7 @@ public class LoginServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Page page = new Page("login.jsp");
-        page.render(request, response);
+        page.redirect(request, response);
     }
     
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         
         if (team != null) {
             Page page = new Page("question1.html");
-            page.render(request, response);
+            page.redirect(request, response);
             return;
         }
         
@@ -34,18 +34,18 @@ public class LoginServlet extends HttpServlet {
         if (team == null) {
             request.setAttribute("message", "Foute code!");
             Page page = new Page("login.jsp");
-            page.render(request, response);
+            page.redirect(request, response);
             return;
         } else if (team.getSession() != null) {
             request.setAttribute("message", "Er is al iemand ingelogd op die code!");
             Page page = new Page("login.jsp");
-            page.render(request, response);
+            page.redirect(request, response);
             return;
         }
         
         team.setSession(session);
         
         Page page = new Page("question1.html");
-        page.render(request, response);
+        page.redirect(request, response);
     }
 }

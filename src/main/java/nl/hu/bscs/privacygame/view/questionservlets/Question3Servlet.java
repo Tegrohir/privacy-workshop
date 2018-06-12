@@ -11,7 +11,7 @@ public class Question3Servlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Page page = new Page("question3.html");
-        page.render(request, response);
+        page.redirect(request, response);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
