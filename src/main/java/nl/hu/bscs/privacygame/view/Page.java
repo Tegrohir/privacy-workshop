@@ -1,22 +1,21 @@
 package nl.hu.bscs.privacygame.view;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Page {
-    private static Logger logger = Logger.getLogger(Page.class.getName());
-    private String page;
-    
+    private final static Logger logger = Logger.getLogger(Page.class.getName());
+    private final String page;
+
     public Page(String page) {
         this.page = page;
     }
-    
+
     public void forward(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(page);
         try {
@@ -26,7 +25,7 @@ public class Page {
             logger.log(Level.SEVERE, message, e);
         }
     }
-    
+
     public void redirect(HttpServletResponse response) {
         try {
             response.sendRedirect(page);
