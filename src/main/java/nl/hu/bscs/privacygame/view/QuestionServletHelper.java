@@ -24,13 +24,13 @@ public class QuestionServletHelper {
         logger.info("Team " + team.getId() + " answer: " + answer.getText());
 
         Page page = new Page(nextPageUrl);
-        page.render(request, response);
+        page.redirect(request, response);
     }
 
     private boolean authorizeUser(HttpServletRequest request, HttpServletResponse response, Team team) {
         if (team == null) {
             Page page = new Page("unauthorized.html");
-            page.render(request, response);
+            page.redirect(request, response);
             return true;
         }
         return false;
