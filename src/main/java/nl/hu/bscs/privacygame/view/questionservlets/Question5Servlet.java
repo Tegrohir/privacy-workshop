@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class Question5Servlet extends HttpServlet {
+    private static final long serialVersionUID = 2387396288271445076L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Page page = new Page("question5.html");
