@@ -44,11 +44,6 @@
 	</servlet>
 
 	<servlet>
-		<servlet-name>Question7Servlet</servlet-name>
-		<servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question7Servlet</servlet-class>
-	</servlet>
-
-	<servlet>
 		<servlet-name>AdminServlet</servlet-name>
 		<servlet-class>nl.hu.bscs.privacygame.view.AdminServlet</servlet-class>
 	</servlet>
@@ -91,11 +86,6 @@
 	<servlet-mapping>
 		<servlet-name>Question6Servlet</servlet-name>
 		<url-pattern>/question6</url-pattern>
-	</servlet-mapping>
-
-	<servlet-mapping>
-		<servlet-name>Question7Servlet</servlet-name>
-		<url-pattern>/question7</url-pattern>
 	</servlet-mapping>
 
 	<servlet-mapping>
