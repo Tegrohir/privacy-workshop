@@ -31,6 +31,8 @@ body {
 }
 
 .next {
+    text-decoration: none;
+    display: inline-block;
     background-color: #1480d6;
     color: white;
     border: 0;
