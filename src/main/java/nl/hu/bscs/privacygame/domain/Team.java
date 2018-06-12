@@ -43,13 +43,15 @@ public class Team {
             this.answers.remove(existingAnswer);
         }
         
-        this.answers.add(existingAnswer);
+        this.answers.add(answer);
     }
     
     public Answer getAnswerByQuestionId(int questionId) {
-        for (Answer answer: answers) {
-            if (answer.getQuestionId() == questionId) {
-                return answer;
+        if (!answers.isEmpty()) {
+            for (Answer answer : answers) {
+                if (answer.getQuestionId() == questionId) {
+                    return answer;
+                }
             }
         }
         
