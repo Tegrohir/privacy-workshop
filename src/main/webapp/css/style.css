@@ -53,6 +53,18 @@ header, footer {
     text-align: center;
 }
 
+.progress-container {
+	background-color: #f1f1f1;
+	clear: left;
+	border-top: 1px solid #0f67ad;
+}
+
+.progress-bar {
+	background-color: #46a0e9;
+	color: white;
+	padding: 5px 20px;
+}
+
 article {
     padding: 1em;
     width: 100%;
