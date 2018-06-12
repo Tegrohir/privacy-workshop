@@ -14,22 +14,21 @@ public class QuestionServletHelper {
         Service service = Service.getInstance();
 
         String session = SessionUtility.getSessionId(request);
-        User user = service.getUserBySession(session);
+        Team team = service.getTeamBySession(session);
 
-        if (authorizeUser(request, response, user)) return;
+        if (authorizeUser(request, response, team)) return;
 
         Answer answer = new Answer(request.getParameter("answer"));
-        user.addAnswer(answer);
-
-        Team team = service.getTeamBySession(session);
+        team.addAnswer(answer);
+        
         logger.info("Team " + team.getId() + " answer: " + answer.getText());
 
         Page page = new Page(nextPageUrl);
         page.render(request, response);
     }
 
-    private boolean authorizeUser(HttpServletRequest request, HttpServletResponse response, User user) {
-        if (user == null) {
+    private boolean authorizeUser(HttpServletRequest request, HttpServletResponse response, Team team) {
+        if (team == null) {
             Page page = new Page("unauthorized.html");
             page.render(request, response);
             return true;

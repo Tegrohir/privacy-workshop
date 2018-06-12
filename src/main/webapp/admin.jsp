@@ -29,24 +29,20 @@
 					<h1>Team <c:out value="${team.id}" /> (code: <c:out value="${team.code}" />)</h1>
 					
 					<c:choose>
-						<c:when test="${empty team.users}">
-							<p>Er zijn geen gebruikers gevonden.</p>
+						<c:when test="${empty team.answers}">
+							<p>Er zijn geen antwoorden gevonden.</p>
 						</c:when>
 						<c:otherwise>
 							<table id="history">
 								<tr>
-									<th>Gebruiker</th>
-									<th>Antwoorden</th>
+									<th>Antwoord</th>
+									<th>Tijd</th>
 								</tr>
-								<c:forEach items="${team.users}" var="user">
-									<tr>
-										<td><c:out value="${user.session}" /></td>
-										<td><c:forEach items="${user.answers}" var="answer">
-												<fmt:formatDate pattern = "dd-MM-yyyy HH:mm:ss" value = "${answer.date}" />: 
-												<c:out value="${answer.text}" />
-												<hr>
-											</c:forEach></td>
-									</tr>
+								<c:forEach items="${team.answers}" var="answer">
+								<tr>
+									<td><c:out value="${answer.text}" /></td>
+									<td><fmt:formatDate pattern = "dd-MM-yyyy HH:mm:ss" value = "${answer.date}" /></td>
+								</tr>
 								</c:forEach>
 							</table>
 						</c:otherwise>

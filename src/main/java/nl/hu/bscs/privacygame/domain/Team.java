@@ -6,7 +6,8 @@ import java.util.List;
 public class Team {
     private int id;
     private String code;
-    private List<User> users = new ArrayList<>();
+    private String session;
+    private List<Answer> answers = new ArrayList<>();
     
     public int getId() {
         return id;
@@ -23,22 +24,24 @@ public class Team {
     public void setCode(String code) {
         this.code = code;
     }
-    
-    public List<User> getUsers() {
-        return users;
+
+    public String getSession() {
+        return session;
     }
     
-    public User getUser(String session) {
-        for (User user : users) {
-            if (user.getSession().equals(session)) {
-                return user;
-            }
-        }
-        
-        return null;
+    public void setSession(String session) {
+        this.session = session;
     }
     
-    public void addUser(User user) {
-        this.users.add(user);
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
+    
+    public void addAnswer(Answer answer) {
+        this.answers.add(answer);
     }
 }
