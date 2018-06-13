@@ -17,32 +17,32 @@
 
     <servlet>
         <servlet-name>Question1Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question1Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question1Servlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Question2Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question2Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question2Servlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Question3Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question3Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question3Servlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Question4Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question4Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question4Servlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Question5Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question5Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question5Servlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Question6Servlet</servlet-name>
-        <servlet-class>nl.hu.bscs.privacygame.view.questionservlets.Question6Servlet</servlet-class>
+        <servlet-class>nl.hu.bscs.privacygame.view.Question6Servlet</servlet-class>
     </servlet>
 
     <servlet>

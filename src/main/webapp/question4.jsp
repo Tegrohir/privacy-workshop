@@ -27,7 +27,7 @@
         <p>Toelichting: het team dient het beste antwoord uit zoeken op
             basis van onderzoek op internet en door te kijken naar de casus.</p>
         <form action="question4" method="post">
-            <textarea name="answer">Antwoord voor jouw team</textarea>
+            <textarea name="answer"><c:choose><c:when test="${answer == null}">Antwoord voor jouw team</c:when><c:otherwise><c:out value="${answer}"/></c:otherwise></c:choose></textarea>
             <br>
             <div class="buttons">
                 <a href="intermission1.html" class="previous">&laquo; Vorige</a> <input

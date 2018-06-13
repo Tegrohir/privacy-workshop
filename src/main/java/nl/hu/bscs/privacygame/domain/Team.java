@@ -43,7 +43,7 @@ public class Team {
             this.answers.remove(existingAnswer);
         }
         
-        this.answers.add(existingAnswer);
+        this.answers.add(answer);
     }
     
     public Answer getAnswerByQuestionId(int questionId) {

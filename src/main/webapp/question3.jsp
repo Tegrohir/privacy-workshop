@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,18 +29,18 @@
             basis van onderzoek op internet.</p>
         <form action="question3" method="post">
             <input type="radio" name="answer"
-                   value="Een website trackt de bezoekersaantallen en een medewerken bekijkt deze." checked>
+                   value="Een website trackt de bezoekersaantallen en een medewerken bekijkt deze." <c:if test = "${answer == null || fn:contains(answer, 'Een website trackt')}">checked</c:if>>
             Een website trackt de bezoekersaantallen en een medewerken bekijkt deze.
             <br>
             <input type="radio" name="answer"
-                   value="Een werknemer bij Acrobaat BV bekijkt de financiÃ«le prestaties van het bedrijf en verwerkt deze in een rapport.">
-            Een werknemer bij Acrobaat BV bekijkt de financiÃ«le prestaties van het bedrijf en verwerkt deze in een rapport.
+                   value="Een werknemer bij Acrobaat BV bekijkt de financiële prestaties van het bedrijf en verwerkt deze in een rapport." <c:if test = "${fn:contains(answer, 'Een werknemer bij')}">checked</c:if>>
+            Een werknemer bij Acrobaat BV bekijkt de financiële prestaties van het bedrijf en verwerkt deze in een rapport.
             <br>
             <input type="radio" name="answer"
-                   value="Een bedrijf wijzigt de licentie van een klant.">
+                   value="Een bedrijf wijzigt de licentie van een klant." <c:if test = "${fn:contains(answer, 'Een bedrijf wijzigt')}">checked</c:if>>
             Een bedrijf wijzigt de licentie van een klant.
             <br>
-            <input type="radio" name="answer" value="Een werknemer raadpleegt een email lijst.">
+            <input type="radio" name="answer" value="Een werknemer raadpleegt een email lijst." <c:if test = "${fn:contains(answer, 'Een werknemer raadpleegt')}">checked</c:if>>
             Een werknemer raadpleegt een email lijst.
             <br>
             <div class="buttons">

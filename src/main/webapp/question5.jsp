@@ -27,16 +27,16 @@
         <p>Toelichting: het team dient het beste antwoord uit zoeken op
             basis van onderzoek op internet.</p>
         <form action="question5" method="post">
-            <input type="radio" name="answer" value="Leeftijd" checked>
+            <input type="radio" name="answer" value="Leeftijd" <c:if test = "${answer == null || answer == 'Leeftijd'}">checked</c:if>>
             Leeftijd
             <br>
-            <input type="radio" name="answer" value="Telefoonnummer">
+            <input type="radio" name="answer" value="Telefoonnummer" <c:if test = "${answer == 'Telefoonnummer'}">checked</c:if>>
             Telefoonnummer
             <br>
-            <input type="radio" name="answer" value="Godsdienst">
+            <input type="radio" name="answer" value="Godsdienst" <c:if test = "${answer == 'Godsdienst'}">checked</c:if>>
             Godsdienst
             <br>
-            <input type="radio" name="answer" value="Adres">
+            <input type="radio" name="answer" value="Adres" <c:if test = "${answer == 'Adres'}">checked</c:if>>
             Adres
             <br>
             <div class="buttons">
