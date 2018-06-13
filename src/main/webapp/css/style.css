@@ -12,17 +12,26 @@ body {
     margin-top: 15px;
 }
 
-.previous, .next {
+a.button,
+input.button {
     padding: 8px 16px;
     border-radius: 7px;
 }
 
-.previous {
-    text-decoration: none;
+a.button {
+	text-decoration: none;
     display: inline-block;
+    margin-right: 8px;
+}
+
+input.button {
+	border: 0;
+    cursor: pointer;
+}
+
+.previous {
     background-color: #eee;
     color: black;
-    margin-right: 8px;
 }
 
 .previous:hover {
@@ -31,12 +40,9 @@ body {
 }
 
 .next {
-    text-decoration: none;
-    display: inline-block;
     background-color: #1480d6;
     color: white;
-    border: 0;
-    cursor: pointer;
+
 }
 
 .next:hover {
@@ -101,4 +107,8 @@ form {
 textarea, input {
     font-family: inherit;
     font-size: inherit;
+}
+
+footer a {
+	color: white;
 }

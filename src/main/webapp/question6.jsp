@@ -30,13 +30,13 @@
             <textarea name="answer"><c:choose><c:when test="${answer == null}">Antwoord voor jouw team</c:when><c:otherwise><c:out value="${answer}"/></c:otherwise></c:choose></textarea>
             <br>
             <div class="buttons">
-                <a href="question5" class="previous">&laquo; Vorige</a> <input
-                    class="next" type="submit" value="Volgende &raquo;">
+                <a href="question5" class="button previous">&laquo; Vorige</a> <input
+                    class="button next" type="submit" value="Volgende &raquo;">
             </div>
         </form>
     </article>
 
-    <footer>Copyright &copy; The Privacy Game</footer>
+    <footer>Copyright &copy; The Privacy Game · <a href="casus.html" target="_blank">Casus</a></footer>
 
 </div>
 

@@ -43,13 +43,13 @@
             Een werknemer raadpleegt een email lijst.
             <br>
             <div class="buttons">
-                <a href="question2" class="previous">&laquo; Vorige</a> <input
-                    class="next" type="submit" value="Volgende &raquo;">
+                <a href="question2" class="button previous">&laquo; Vorige</a> <input
+                    class="button next" type="submit" value="Volgende &raquo;">
             </div>
         </form>
     </article>
 
-    <footer>Copyright &copy; The Privacy Game</footer>
+    <footer>Copyright &copy; The Privacy Game · <a href="casus.html" target="_blank">Casus</a></footer>
 
 </div>
 

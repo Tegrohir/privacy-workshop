@@ -28,13 +28,13 @@
         <form action="login" method="post">
             <input type="text" name="code"><br>
             <div class="buttons">
-                <a href="start" class="previous">&laquo; Previous</a> <input
-                    class="next" type="submit" value="Next &raquo;">
+                <a href="start" class="button previous">&laquo; Previous</a> <input
+                    class="button next" type="submit" value="Next &raquo;">
             </div>
         </form>
     </article>
 
-    <footer>Copyright &copy; The Privacy Game</footer>
+    <footer>Copyright &copy; The Privacy Game · <a href="casus.html" target="_blank">Casus</a></footer>
 
 </div>
 
