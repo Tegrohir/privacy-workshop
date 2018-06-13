@@ -35,11 +35,13 @@
                         <c:otherwise>
                             <table id="history">
                                 <tr>
+                                    <th>Vraag</th>
                                     <th>Antwoord</th>
                                     <th>Tijd</th>
                                 </tr>
                                 <c:forEach items="${team.answers}" var="answer">
                                     <tr>
+                                        <td><c:out value="${answer.questionId}"/></td>
                                         <td><c:out value="${answer.text}"/></td>
                                         <td><fmt:formatDate pattern="dd-MM-yyyy HH:mm:ss" value="${answer.date}"/></td>
                                     </tr>
