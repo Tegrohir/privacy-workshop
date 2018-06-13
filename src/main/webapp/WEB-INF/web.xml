@@ -49,6 +49,16 @@
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>nl.hu.bscs.privacygame.view.AdminServlet</servlet-class>
     </servlet>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>nl.hu.bscs.privacygame.view.LogoutServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ResetServlet</servlet-name>
+        <servlet-class>nl.hu.bscs.privacygame.view.ResetServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>StartServlet</servlet-name>
@@ -93,5 +103,15 @@
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>ResetServlet</servlet-name>
+        <url-pattern>/reset</url-pattern>
     </servlet-mapping>
 </web-app>

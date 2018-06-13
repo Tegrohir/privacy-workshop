@@ -5,16 +5,35 @@ import java.util.List;
 
 public class Service {
     private static final Service service = new Service();
-    private final List<Team> teams = new ArrayList<>();
+    private List<Team> teams;
 
     private Service() {
-        teams.addAll(TeamFactory.createTeams());
+        reset();
     }
 
     public static Service getInstance() {
         return service;
     }
+    
+    public void reset() {
+        teams = new ArrayList<>();
+        teams.addAll(TeamFactory.createTeams());
+    }
 
+    public List<Team> getTeams() {
+        return teams;
+    }
+    
+    public Team getTeamById(int id) {
+        for (Team team : teams) {
+            if (team.getId() == id) {
+                return team;
+            }
+        }
+
+        return null;
+    }
+    
     public Team getTeamByCode(String code) {
         for (Team team : teams) {
             if (team.getCode().equals(code)) {
@@ -23,10 +42,6 @@ public class Service {
         }
 
         return null;
-    }
-
-    public List<Team> getTeams() {
-        return teams;
     }
 
     public Team getTeamBySession(String session) {
