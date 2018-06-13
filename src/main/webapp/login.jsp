@@ -28,8 +28,8 @@
         <form action="login" method="post">
             <input type="text" name="code"><br>
             <div class="buttons">
-                <a href="start" class="button previous">&laquo; Previous</a> <input
-                    class="button next" type="submit" value="Next &raquo;">
+                <a href="start" class="button previous">&laquo; Vorige</a> <input
+                    class="button next" type="submit" value="Volgende &raquo;">
             </div>
         </form>
     </article>
