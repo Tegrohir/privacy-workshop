@@ -33,13 +33,13 @@ public class LoginServlet extends HttpServlet {
 
         if (team == null) {
             request.setAttribute("message", "Foute code!");
-            Page page = new Page("login");
-            page.redirect(response);
+            Page page = new Page("login.jsp");
+            page.forward(request, response);
             return;
         } else if (team.getSession() != null) {
             request.setAttribute("message", "Er is al iemand ingelogd op die code!");
-            Page page = new Page("login");
-            page.redirect(response);
+            Page page = new Page("login.jsp");
+            page.forward(request, response);
             return;
         }
 
