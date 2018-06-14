@@ -25,10 +25,6 @@
 	        <br><br>
 	        <input type="submit" value="Log Out">
         </form>
-        <form action="reset" method="post">
-	        Reset alle data:
-	        <input type="submit" value="Reset">
-        </form> 
         <c:choose>
             <c:when test="${empty teams}">
                 <p>Er zijn geen teams gevonden.</p>
@@ -63,6 +59,10 @@
 
             </c:otherwise>
         </c:choose>
+        <form action="reset" method="post">
+	        Reset alle data:
+	        <input type="submit" value="Reset">
+        </form> 
     </article>
 </div>
 
