@@ -23,7 +23,7 @@
     </div>
 
         <article>
-            <h1>Binnen hoeveel uur na constatering moet Acrobaat BV het datalek bij de Autoriteit Persoonsgegevens gemeld worden?</h1>
+            <h1>Binnen hoeveel dagen na constatering moet Acrobaat BV het datalek bij de Autoriteit Persoonsgegevens gemeld worden?</h1>
             <form action="question1" method="post">
                 <input type="radio" name="answer" value="7 dagen" <c:if test = "${answer == null || answer == '7 dagen'}">checked</c:if>>
                 7 dagen<br>
